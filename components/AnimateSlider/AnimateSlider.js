@@ -35,7 +35,7 @@ function AnimateSlider() {
   const classes = useStyles();
   const { t } = useTranslation('common');
   return (
-    <div className={classes.heroContent}>
+    <div id="bbb" className={classes.heroContent}>
       <Slider className="slider-wrapper">
         {content.map((item, index) => (
           <div

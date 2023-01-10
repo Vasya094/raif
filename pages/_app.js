@@ -12,7 +12,7 @@ import { create } from 'jss';
 import { PageTransition } from 'next-page-transitions';
 import rtl from 'jss-rtl';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import LoadingBar from 'react-top-loading-bar';
+// import LoadingBar from 'react-top-loading-bar';
 import { appWithTranslation } from 'next-i18next';
 import lngDetector from '../lib/languageDetector';
 import appTheme from '../theme/appTheme';
@@ -34,40 +34,32 @@ if (typeof Storage !== 'undefined') { // eslint-disable-line
 
 function MyApp(props) {
   const { Component, pageProps, router } = props; // eslint-disable-line
-  const [loading, setLoading] = useState(0);
   const curLang = lngDetector.detect();
   const [theme, setTheme] = useState({
     ...appTheme('burgundy', themeType),
     direction: curLang === 'ar' ? 'rtl' : 'ltr'
   });
 
-  useEffect(() => {
-    // Set layout direction
-    document.dir = curLang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.setAttribute('lang', curLang);
+  // useEffect(() => {
+  //   // Set layout direction
+  //   console.log('first');
+  //   // document.dir = curLang === 'ar' ? 'rtl' : 'ltr';
+  //   // document.documentElement.setAttribute('lang', curLang);
 
-    // Enable this code below for Server Side Rendering/Translation (SSR)
-    // const { pathname, asPath, query } = router;
-    // router.push({ pathname, query }, asPath, { locale: curLang });
+  //   // Enable this code below for Server Side Rendering/Translation (SSR)
+  //   // const { pathname, asPath, query } = router;
+  //   // router.push({ pathname, query }, asPath, { locale: curLang });
 
-    // Remove preloader
-    const preloader = document.getElementById('preloader');
-    if (preloader !== null || undefined) {
-      setTimeout(() => {
-        preloader.remove();
-      }, 1500);
-    }
+  //   // Remove loading bar
+  //   // setLoading(0);
+  //   // setTimeout(() => { setLoading(100); }, 2000);
 
-    // Remove loading bar
-    setLoading(0);
-    setTimeout(() => { setLoading(100); }, 2000);
-
-    // Refresh JSS in SSR
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
-      jssStyles.parentNode.removeChild(jssStyles);
-    }
-  }, []);
+  //   // Refresh JSS in SSR
+  //   // const jssStyles = document.querySelector('#jss-server-side');
+  //   // if (jssStyles) {
+  //   //   jssStyles.parentNode.removeChild(jssStyles);
+  //   // }
+  // }, []);
 
   const toggleDarkTheme = () => {
     const newPaletteType = theme.palette.type === 'light' ? 'dark' : 'light';
@@ -102,12 +94,12 @@ function MyApp(props) {
       <StylesProvider jss={jss}>
         <ThemeProvider theme={muiTheme}>
           <CssBaseline />
-          <LoadingBar
+          {/* <LoadingBar
             height={0}
             color={theme.palette.primary.main}
             progress={loading}
             className="top-loading-bar"
-          />
+          /> */}
           <div id="main-wrap">
             <PageTransition timeout={300} classNames="page-fade-transition">
               <Component

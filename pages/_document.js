@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html lang={currentLocale} dir={currentLocale === 'ar' ? 'rtl' : 'ltr'}>
         <HeadComponent />
         <body>
-          <div
+          {/* <div
             id="preloader"
             style={{
               position: 'fixed',
@@ -31,7 +31,7 @@ class MyDocument extends Document {
               src="/images/loading.gif"
               alt="loading"
             />
-          </div>
+          </div> */}
           <Main />
           <NextScript />
         </body>

@@ -5,9 +5,11 @@ const appTheme = (color, mode) => ({
     primary: palette[color].palette.primary,
     secondary: palette[color].palette.secondary,
     action: {
-      hover: mode === 'dark' ? 'rgba(128,128,128, 0.9)' : 'rgba(128,128,128, 0.05)',
+      hover: mode === 'dark' ? 'rgba(128,128,128, 0.9)' : '#f5f5f5c9',
+      test: mode === 'dark' ? '#4a4a4ae8 ' : '#f5f5f5e8',
+      half: mode === 'dark' ? '#4a4a4abd' : 'rgba(25, 101, 176, 0.7)',
       hoverOpacity: 0.05
-    }
+    },
   },
   typography: {
     fontFamily: [

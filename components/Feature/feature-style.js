@@ -13,7 +13,7 @@ const decoration = theme => ({
 
 const featureStyles = makeStyles(theme => ({
   pageSection: {
-    marginBottom: theme.spacing(20)
+    marginBottom: theme.spacing(12)
   },
   featureWrap: {
     position: 'relative'
@@ -30,7 +30,11 @@ const featureStyles = makeStyles(theme => ({
       height: 100
     }
   },
-  title: {},
+  title: {
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2rem'
+    },
+  },
   text: {},
   img: {},
   imgFull: {},
@@ -132,7 +136,7 @@ const featureStyles = makeStyles(theme => ({
   },
   parallaxDot: {
     top: -20,
-    fill: theme.palette.text.hint,
+    fill: theme.palette.primary.main,
     width: 845,
     height: 1099,
     opacity: 0.4,
@@ -140,11 +144,11 @@ const featureStyles = makeStyles(theme => ({
   },
   parallaxTriangle: {
     top: 100,
-    outline: theme.palette.text.hint,
+    outline: theme.palette.secondary.main,
     opacity: 0.1,
     width: 902,
     height: 1042,
-    stroke: theme.palette.text.hint,
+    stroke: theme.palette.secondary.main,
     fill: 'transparent',
     strokeWidth: 50,
     right: -210
@@ -154,11 +158,16 @@ const featureStyles = makeStyles(theme => ({
     width: 600,
     height: 570,
     opacity: 0.1,
-    stroke: theme.palette.text.hint,
+    stroke: theme.palette.secondary,
     fill: 'transparent',
     strokeWidth: 40,
     right: 40
   },
+  secondImgText: {
+    [theme.breakpoints.down('md')]: {
+      flexFlow: 'column-reverse'
+    },
+  }
 }));
 
 export default featureStyles;

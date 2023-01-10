@@ -1,9 +1,8 @@
 const menu = [
-  'feature',
-  'testimonials',
+  'main',
+  'about_us',
   'pricing',
-  'blog',
-  'subscribe'
+  'contacts',
 ];
 
 export default menu;

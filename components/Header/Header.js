@@ -9,9 +9,10 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
+import { useTranslation } from 'react-i18next';
 import Settings from './Settings';
 import MobileMenu from './MobileMenu';
-import logo from '~/public/images/logo.svg';
+import logo from '~/public/images/header_logo.png';
 import useStyles from './header-style';
 import navMenu from './menu';
 
@@ -25,9 +26,9 @@ function createData(name, url) {
   };
 }
 
-const LinkBtn = React.forwardRef(function LinkBtn(props, ref) { // eslint-disable-line
-  return <AnchorLink to={props.to} {...props} innerRef={ref} />; // eslint-disable-line
-});
+// const LinkBtn = React.forwardRef((props, ref) =>
+//    <AnchorLink to={props.to} {...props} innerRef={ref} /> // eslint-disable-line
+// );
 
 function Header(props) {
   const [fixed, setFixed] = useState(false);
@@ -35,17 +36,20 @@ function Header(props) {
   const handleScroll = () => {
     const doc = document.documentElement;
     const scroll = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    const newFlagFixed = (scroll > 80);
+    const newFlagFixed = scroll > 80;
     if (flagFixed !== newFlagFixed) {
       setFixed(newFlagFixed);
       flagFixed = newFlagFixed;
     }
   };
   useEffect(() => {
+    console.log('first');
     window.addEventListener('scroll', handleScroll);
   }, []);
+
   const classes = useStyles();
   const theme = useTheme();
+  const { t } = useTranslation('common');
   const { onToggleDark, onToggleDir } = props;
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -54,7 +58,7 @@ function Header(props) {
     createData(navMenu[1], '#' + navMenu[1]),
     createData(navMenu[2], '#' + navMenu[2]),
     createData(navMenu[3], '#' + navMenu[3]),
-    createData(navMenu[4], '#' + navMenu[4]),
+    // createData(navMenu[4], '#' + navMenu[4]),
   ]);
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
@@ -62,7 +66,9 @@ function Header(props) {
   };
   return (
     <Fragment>
-      { isMobile && (<MobileMenu open={openDrawer} toggleDrawer={handleOpenDrawer} />) }
+      {isMobile && (
+        <MobileMenu open={openDrawer} toggleDrawer={handleOpenDrawer} />
+      )}
       <AppBar
         position="relative"
         id="header"
@@ -75,10 +81,14 @@ function Header(props) {
         <Container fixed>
           <div className={classes.headerContent}>
             <nav className={classes.navMenu}>
-              { isMobile && (
+              {isMobile && (
                 <IconButton
                   onClick={handleOpenDrawer}
-                  className={clsx('hamburger hamburger--spin', classes.mobileMenu, openDrawer && 'is-active')}
+                  className={clsx(
+                    'hamburger hamburger--spin',
+                    classes.mobileMenu,
+                    openDrawer && 'is-active'
+                  )}
                 >
                   <span className="hamburger-box">
                     <span className={clsx(classes.bar, 'hamburger-inner')} />
@@ -91,25 +101,24 @@ function Header(props) {
                 </AnchorLink>
               </div>
               {isDesktop && (
-                <Scrollspy
-                  items={navMenu}
-                  currentClassName="active"
-                >
-                  { menuList.map(item => (
-                    <li key={item.id.toString()}>
-                      <Button component={AnchorLink} href={item.url}>{item.name}</Button>
-                    </li>
-                  )) }
-                  <li>
-                    <Button href="#">Contact</Button>
-                  </li>
-                </Scrollspy>
+                <div className={classes.routesContainer}>
+                  <Scrollspy items={navMenu} currentClassName="active">
+                    {menuList.map((item) => (
+                      <li key={item.id.toString()}>
+                        <Button component={AnchorLink} href={item.url}>
+                          {t(item.name)}
+                        </Button>
+                      </li>
+                  ))}
+                    {/* <li>
+                    <Button href='#'>Contact</Button>
+                  </li> */}
+                  </Scrollspy>
+                </div>
               )}
             </nav>
             <nav className={classes.userMenu}>
-              { isDesktop && <Button href="#">Login</Button> }
-              <Button variant="contained" color="primary" href="#">Register</Button>
-              { isDesktop && <span className={classes.vDivider} /> }
+              <span className={classes.vDivider} />
               <Settings toggleDark={onToggleDark} toggleDir={onToggleDir} />
             </nav>
           </div>
@@ -121,7 +130,7 @@ function Header(props) {
 
 Header.propTypes = {
   onToggleDark: PropTypes.func.isRequired,
-  onToggleDir: PropTypes.func.isRequired
+  onToggleDir: PropTypes.func.isRequired,
 };
 
 export default Header;

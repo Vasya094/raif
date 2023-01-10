@@ -35,9 +35,10 @@ function PageNav() {
       flagShow = newFlagShow;
     }
   };
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   console.log('first');
+  //   window.addEventListener('scroll', handleScroll);
+  // }, []);
   const classes = useStyles();
   const [menuList] = useState([
     createData(1, navMenu[0], '#' + navMenu[0].replace(/ /g, '_')),
@@ -61,7 +62,7 @@ function PageNav() {
           href="#home"
           className={classes.fab}
         >
-          <ArrowIcon />
+          <ArrowIcon style={{ fill: 'black' }} />
         </Fab>
       </Tooltip>
       <nav className={classes.sectionNav}>

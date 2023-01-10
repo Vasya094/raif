@@ -7,22 +7,22 @@ module.exports = withImages({
   // Enable this code below for Server Side Rendering/Translation (SSR)
   //  i18n,
   useTrailingSlash: true,
+  reactStrictMode: false,
   images: {
-    disableStaticImages: true
+    disableStaticImages: true,
   },
   publicRuntimeConfig: {
-    localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
-      ? process.env.LOCALE_SUBPATHS
-      : 'none',
+    localeSubpaths:
+      typeof process.env.LOCALE_SUBPATHS === 'string'
+        ? process.env.LOCALE_SUBPATHS
+        : 'none',
   },
   webpack: (config, options) => {
-    cssModules: true,
-    config.plugins.push(
-      // new ESLintPlugin({
-        // exclude: ['node_modules']
-      // })
-    );
-    config.node = {}
+    true,
+      config.plugins
+        // eslint-disable-next-line func-call-spacing
+        .push();
+    config.node = {};
     return config;
   },
 });

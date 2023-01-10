@@ -8,6 +8,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import i18nextConfig from '../../next-i18next.config';
 import languageDetector from '../../lib/languageDetector';
 
 const LanguageSwitch = ({
@@ -35,9 +36,22 @@ const LanguageSwitch = ({
 
   const changeLang = lang => {
     languageDetector.cache(lang);
-
-    const { pathname, asPath, query } = router;
-    router.push({ pathname, query }, asPath, { locale: lang });
+    if (i18nextConfig.ssg) {
+      Object.keys(router.query).forEach((k) => {
+        if (k === 'locale') {
+          pName = pName.replace(`[${k}]`, lang);
+          return;
+        }
+        pName = pName.replace(`[${k}]`, router.query[k]);
+      });
+      if (lang) {
+        href = pName;
+      }
+      router.push(href);
+    } else {
+      const { pathname, asPath, query } = router;
+      router.push({ pathname, query }, asPath, { locale: lang });
+    }
 
     if (lang === 'ar') {
       toggleDir('rtl');
@@ -55,7 +69,7 @@ const LanguageSwitch = ({
         onClick={() => changeLang(locale)}
       >
         <ListItemIcon>
-          <i className={locale} />
+          <img style={{ height: '20px' }} src={`/images/langs/${locale}.png`} alt="flag" />
         </ListItemIcon>
         <ListItemText primary={t(locale)} />
         {checked && (

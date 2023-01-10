@@ -6,10 +6,12 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { useTranslation } from 'react-i18next';
 import useStyles from './header-style';
 import navMenu from './menu';
 
 function MobileMenu(props) {
+  const { t } = useTranslation('common');
   const classes = useStyles();
   const { toggleDrawer, open } = props;
   const SideList = () => (
@@ -30,11 +32,11 @@ function MobileMenu(props) {
               index={index.toString()}
               style={{ animationDuration: index * 0.15 + 's' }}
             >
-              <ListItemText primary={item} className={classes.menuList} />
+              <ListItemText primary={t(item)} className={classes.menuList} />
             </ListItem>
           ))}
         </List>
-        <Divider />
+        {/* <Divider />
         <List>
           {['login', 'register', 'contact'].map((text, index) => (
             <ListItem
@@ -48,7 +50,7 @@ function MobileMenu(props) {
               <ListItemText className={classes.menuList} primary={text} />
             </ListItem>
           ))}
-        </List>
+        </List> */}
       </div>
     </div>
   );

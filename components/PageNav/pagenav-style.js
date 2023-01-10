@@ -64,7 +64,7 @@ const pagenav = makeStyles(theme => ({
       },
       '&[class="active"] a': {
         background: theme.palette.primary.dark,
-        border: `1px solid ${theme.palette.primary.light}`,
+        border: `3px solid ${theme.palette.primary.light}`,
       },
     },
     '&:hover': {

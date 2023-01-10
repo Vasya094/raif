@@ -1,8 +1,8 @@
 module.exports = {
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'de', 'id', 'ar', 'pt', 'zh'],
-    fallbackLng: 'en',
+    defaultLocale: 'ru',
+    locales: ['ru', 'en', 'ar'],
+    fallbackLng: 'ru',
   },
   ssg: true // Set to true for Static Site Generation (SSG)
 };

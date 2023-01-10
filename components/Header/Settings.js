@@ -44,8 +44,9 @@ function Settings(props) {
   };
 
   useEffect(() => {
+    console.log('first');
     setCtn(document.getElementById('main-wrap'));
-  });
+  }, []);
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
@@ -57,13 +58,11 @@ function Settings(props) {
         aria-describedby={id}
         aria-label="Settings"
         onClick={handleClick}
-        className={
-          clsx(
-            classes.icon,
-            open && classes.active,
-            invert && classes.invert
-          )
-        }
+        className={clsx(
+          classes.icon,
+          open && classes.active,
+          invert && classes.invert
+        )}
       >
         <SettingsIcon fontSize="inherit" />
       </IconButton>
@@ -88,23 +87,24 @@ function Settings(props) {
           aria-label="Mode-menu"
           subheader={(
             <ListSubheader component="div">
-              {t('starter-landing.header_theme')}
+              {t('color_theme')}
             </ListSubheader>
           )}
         >
           <ListItem>
             <Typography component="div">
               <Grid component="label" container alignItems="center" spacing={1}>
-                <Grid item>{t('starter-landing.header_light')}</Grid>
+                <Grid item>{t('light_coloured')}</Grid>
                 <Grid item>
                   <Switch
                     checked={isDark}
                     onChange={handleChangeMode}
                     value={isDark}
+                    color="primary"
                     inputProps={{ 'aria-label': 'checkbox' }}
                   />
                 </Grid>
-                <Grid item>{t('starter-landing.header_dark')}</Grid>
+                <Grid item>{t('dark_coloured')}</Grid>
               </Grid>
             </Typography>
           </ListItem>
@@ -116,7 +116,7 @@ function Settings(props) {
           aria-label="Language-menu"
           subheader={(
             <ListSubheader component="div">
-              {t('starter-landing.header_language')}
+              {t('select_language')}
             </ListSubheader>
           )}
         >
@@ -142,7 +142,7 @@ Settings.propTypes = {
 };
 
 Settings.defaultProps = {
-  invert: false
+  invert: false,
 };
 
 export default Settings;

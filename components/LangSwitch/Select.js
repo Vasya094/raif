@@ -33,7 +33,7 @@ function SelectLang(props) {
       ...oldValues,
       [event.target.name]: lang,
     }));
-
+debugger;
     if (i18nextConfig.ssg) {
       let href = router.asPath;
       let pName = router.pathname;
