@@ -2,14 +2,17 @@ import React from 'react';
 import { Head } from 'next/document';
 import theme from '../theme/palette';
 import brand from '../public/text/brand';
+import { useTranslation } from 'react-i18next';
 
-const HeadComponent = () => (
+const HeadComponent = () => {
+  const {t} = useTranslation('common')
+  return (
   <Head>
     <meta charSet="utf-8" />
     {/* Use minimum-scale=1 to enable GPU rasterization */}
     <meta
       name="description"
-      content={brand.starter.desc}
+      content={t('complex_services_agroholdings')}
     />
     {/* Favicon */}
     <link rel="icon" href="/favicons/favicon.ico" />
@@ -53,7 +56,7 @@ const HeadComponent = () => (
     <meta property="og:title" content={brand.starter.title} />
     <meta
       property="og:description"
-      content={brand.starter.desc}
+      content={t('complex_services_agroholdings')}
     />
     <meta name="twitter:site" content={brand.starter.url} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -62,6 +65,6 @@ const HeadComponent = () => (
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
   </Head>
-);
+)};
 
 export default HeadComponent;

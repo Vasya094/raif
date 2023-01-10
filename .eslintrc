@@ -3,8 +3,7 @@
     "eslint-config-airbnb",
     "plugin:flowtype/recommended",
     "next/core-web-vitals",
-    "next/babel",
-    "next/core-web-vitals"
+    "next/babel"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -27,7 +26,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true,
+    "mocha": true
   },
   "parser": "@babel/eslint-parser",
   "rules": {
@@ -72,7 +71,7 @@
           "every": [
             "id"
           ]
-        },
+        }
       }
     ],
     "linebreak-style": 0
@@ -95,6 +94,6 @@
     "__CLIENT__": true,
     "__SERVER__": true,
     "beforeAll": true,
-    "afterAll": true,
+    "afterAll": true
   }
 }
