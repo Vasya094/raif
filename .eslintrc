@@ -2,6 +2,7 @@
   "extends": [
     "eslint-config-airbnb",
     "plugin:flowtype/recommended",
+    "next/core-web-vitals"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -14,7 +15,10 @@
     "parser": "@babel/eslint-parser",
     "babelOptions": {
       "parserOpts": {
-        "plugins": ["jsx", "js"]
+        "plugins": [
+          "jsx",
+          "js"
+        ]
       }
     }
   },
@@ -59,11 +63,16 @@
     "jsx-a11y/anchor-is-valid": 0,
     "react/default-props-match-prop-types": 0,
     "arrow-parens": 0,
-    "jsx-a11y/label-has-for": [2, {
-      "required": {
-        "every": ["id"]
-      },
-    }],
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "required": {
+          "every": [
+            "id"
+          ]
+        },
+      }
+    ],
     "linebreak-style": 0
   },
   "plugins": [
@@ -74,7 +83,10 @@
   "settings": {
     "import/parser": "babel-eslint",
     "import/resolve": {
-      "moduleDirectory": ["node_modules", "src"]
+      "moduleDirectory": [
+        "node_modules",
+        "src"
+      ]
     }
   },
   "globals": {
