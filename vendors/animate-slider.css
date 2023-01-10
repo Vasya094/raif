@@ -132,6 +132,9 @@
   #main_text {
     display: none;
   }    
+  #main_staff_header {
+    margin-bottom: 4rem;
+  }    
 }
 
 @media (max-width: 640px) {

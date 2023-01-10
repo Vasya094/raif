@@ -39,7 +39,7 @@ function MainPage() {
         <div className={classes.overflowHidden}>
           <h1 className={classes.halalHeader}>{t('halal')}</h1>
         </div>
-        <div className={classes.overflowHidden}>
+        <div id="main_staff_header" className={classes.overflowHidden}>
           <h3 style={{ letterSpacing: currentLangRu ? '-10px' : '0' }} className={classes.staffHeader}>{t('staff')}</h3>
         </div>
         <p id="main_text" className={classes.textP}>{t('first_page_long_text')}</p>
