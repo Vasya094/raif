@@ -35,10 +35,9 @@ function PageNav() {
       flagShow = newFlagShow;
     }
   };
-  // useEffect(() => {
-  //   console.log('first');
-  //   window.addEventListener('scroll', handleScroll);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  }, []);
   const classes = useStyles();
   const [menuList] = useState([
     createData(1, navMenu[0], '#' + navMenu[0].replace(/ /g, '_')),

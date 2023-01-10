@@ -5,24 +5,17 @@ import clsx from 'clsx';
 import Head from 'next/head';
 import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
-// Use this below for Server Side Render/Translation (SSR)
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-// Use this below for Static Site Generation (SSG)
 import { useTranslation } from 'react-i18next';
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
 import Header from '~/components/Header';
-// import AnimateSlider from '~/components/AnimateSlider';
 import Feature from '~/components/Feature';
 import Counter from '~/components/Counter';
-// import Testimonials from '~/components/Testimonials';
 import Pricing from '~/components/Pricing';
 import Blog from '~/components/Blog';
 import Subscribe from '~/components/Subscribe';
 import Footer from '~/components/Footer';
 import PageNav from '~/components/PageNav';
 import useStyles from '../../theme/indexPage';
-// import Notification from '~/components/Notification';
-import brand from '~/public/text/brand';
 import MainPage from '../../components/MainPage';
 
 function Landing(props) {

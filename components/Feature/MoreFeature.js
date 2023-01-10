@@ -6,7 +6,6 @@ import ScrollAnimation from 'react-scroll-animation-wrapper';
 import { useTranslation } from 'react-i18next';
 import useStyles from './feature-style';
 import { useTextAlign } from '~/theme/common';
-import imgAPI from '~/public/images/imgAPI';
 
 function MainFeature() {
   const classes = useStyles();
