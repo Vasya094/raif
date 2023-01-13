@@ -52,11 +52,11 @@ function Landing(props) {
             <Testimonials />
           </section> */}
           <section className={classes.spaceTop} id="pricing">
-            <Pricing />
+            {/* <Pricing /> */}
           </section>
           <section
             className={clsx(classes.spaceTop, classes.spaceBottomShort)}
-            id="blog"
+            id="certificates"
           >
             <Blog />
           </section>

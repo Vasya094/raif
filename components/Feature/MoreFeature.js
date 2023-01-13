@@ -49,7 +49,7 @@ function MainFeature() {
             </ScrollAnimation>
             <ScrollAnimation animateOnce animateIn="fadeInLeft" delay={500} duration={0.6}>
               <figure className={classes.img}>
-                <img src="/images/bangs.jpeg" alt="img" />
+                <img src="/images/three_man.jpeg" alt="img" />
               </figure>
             </ScrollAnimation>
           </div>
@@ -88,7 +88,7 @@ function MainFeature() {
               </ScrollAnimation>
               <ScrollAnimation animateOnce animateIn="fadeInUp" delay={500} duration={0.6}>
                 <figure className={classes.imgFull}>
-                  <img src="/images/back_chiken.jpeg" alt="img" />
+                  <img src="/images/white_boy.jpeg" alt="img" />
                 </figure>
               </ScrollAnimation>
             </div>

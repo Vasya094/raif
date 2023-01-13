@@ -2,6 +2,7 @@ const menu = [
   'main',
   'about_us',
   'pricing',
+  'certificates',
   'contacts',
 ];
 

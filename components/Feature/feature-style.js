@@ -71,7 +71,7 @@ const featureStyles = makeStyles(theme => ({
   },
   featureItem: {
     position: 'relative',
-    marginBottom: theme.spacing(20),
+    marginBottom: theme.spacing(5),
     '&$last': {
       marginBottom: 0,
     }

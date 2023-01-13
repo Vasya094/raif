@@ -1,13 +1,13 @@
 module.exports = {
   starter: {
-    name: 'Luxiren Starter',
-    desc: 'Luxiren Starter - React Starter Template',
-    prefix: 'luxiren',
-    footerText: 'Luxiren Theme All Rights Reserved 2021',
-    logoText: 'Luxiren Theme',
-    projectName: 'Starter Project',
-    url: 'luxi.ux-maestro.com',
-    img: '/static/images/logo.png',
+    name: 'Halal Staff',
+    desc: 'Halal Staff - Complex of Halal services',
+    prefix: 'Halal',
+    footerText: 'Halal Staff All Rights Reserved 2021',
+    logoText: 'Halal Staff',
+    projectName: 'Halal Staff',
+    url: 'HalalStaff.com',
+    img: '/static/images/header_logo.png',
     notifMsg: 'Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.'
   }
 };

@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import bg from '../public/images/BpG.png';
+import bg from '../public/images/panorama_factory.jpeg';
 
 const sectionMargin = (margin) => margin * 15;
 const useStyles = makeStyles((theme) => ({

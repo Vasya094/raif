@@ -54,8 +54,8 @@ const pagenav = makeStyles(theme => ({
       '& a': {
         width: 12,
         height: 12,
-        boxShadow: theme.shadows[1],
-        background: alpha(theme.palette.common.white, 0.3),
+        boxShadow: theme.shadows[2],
+        background: theme.palette.common.white,
         border: `1px solid ${theme.palette.primary.dark}`,
         display: 'block',
         transition: 'all 0.4s ease',
@@ -80,7 +80,6 @@ const pagenav = makeStyles(theme => ({
   },
   tooltip: {
     textTransform: 'capitalize',
-    background: theme.palette.primary.dark,
     fontSize: 14
   },
 }));
