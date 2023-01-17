@@ -13,6 +13,7 @@ const mainStyles = makeStyles((theme) => ({
   },
   textContainer: {
     padding: "12px",
+    marginBottom: "6rem",
   },
   "@keyframes dropIn": {
     from: {
