@@ -8,12 +8,16 @@ const mainStyles = makeStyles((theme) => ({
       width: "100vw",
     },
     backgroundColor: theme.palette.action.half,
-    display: "flex",
-    flexFlow: "column-reverse",
+    // display: "flex",
+    // flexFlow: "column-reverse",
   },
   textContainer: {
     padding: "12px",
     marginBottom: "6rem",
+    position: "relative",
+    marginTop: "0",
+    transform: "translateY(-44%)",
+    top: "50%",
   },
   "@keyframes dropIn": {
     from: {
@@ -60,7 +64,7 @@ const mainStyles = makeStyles((theme) => ({
   textP: {
     fontStyle: "normal",
     fontWeight: "500",
-    fontSize: "24px",
+    fontSize: "20px",
     lineHeight: "156.52%",
     letterSpacing: "0.115rem",
     color: "#FFFFFF",
