@@ -21,12 +21,14 @@ const useStyles = makeStyles((theme) => ({
     background: `url(${bg}) no-repeat center center fixed`,
     backgroundSize: "cover",
     backgroundColor: "#464646",
+    backgroundAttachment: 'scroll',
     height: "100vh",
     "-webkit-background-size": "cover",
     "-moz-background-size": "cover",
     "-o-background-size": "cover",
     "&:after": {
       content: "",
+      backgroundAttachment: 'scroll',
       position: "fixed" /* stretch a fixed position to the whole screen */,
       top: "0",
       height:
