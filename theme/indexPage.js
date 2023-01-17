@@ -26,6 +26,14 @@ const useStyles = makeStyles((theme) => ({
     "-moz-background-size": "cover",
     "-o-background-size": "cover",
     "&:after": {
+      content: "",
+      position: "fixed" /* stretch a fixed position to the whole screen */,
+      top: "0",
+      height:
+        "100vh" /* fix for mobile browser address bar appearing disappearing */,
+      left: "0",
+      right: "0",
+      zIndex: "-1",
       background: `url(${bg}) no-repeat center center fixed`,
       "-webkit-background-size": "cover",
       "-moz-background-size": "cover",
