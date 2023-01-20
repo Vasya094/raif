@@ -45,7 +45,6 @@ function AnimateSlider() {
           >
             <div className="inner">
               <Typography variant="h1">{t(item.title)}</Typography>
-              <Typography variant="body1">{t('starter-landing.description_text')}</Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={2} justifyContent="center">
                   <Grid item>

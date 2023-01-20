@@ -7,22 +7,27 @@ import Container from "@material-ui/core/Container"
 import useStyles from "./blog-style"
 import { useTranslation } from "react-i18next"
 import CertificateDialog from "./CertificateDialog"
-//Perfeo_sertifikat.jpeg
-const cards = [1, 2]
+
+const cards = [
+  "СЕРТИФИКАТ_Халяль_Стафф_copy.png",
+  "Свидетельство_халяль_№111_22_ООО_ХАЛЯЛЬ_СТАФФ_copy.png",
+]
 
 function Blog() {
   const { t } = useTranslation("common")
   const classes = useStyles()
 
   const [open, setOpen] = useState(false)
+  const [openWay, setOpenWay] = useState(false)
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (card) => {
     setOpen(true)
+    setOpenWay(card)
   }
   const handleClose = (value) => {
     setOpen(false)
   }
-  
+
   return (
     <Container className={classes.cardGrid} maxWidth='md'>
       <Typography gutterBottom variant='h3' align='center' display='block'>
@@ -35,11 +40,14 @@ function Blog() {
         <Grid style={{ justifyContent: "space-around" }} container spacing={4}>
           {cards.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
-              <Card onClick={handleClickOpen} className={classes.card}>
+              <Card
+                onClick={() => handleClickOpen(card)}
+                className={classes.card}
+              >
                 <CardMedia
                   className={classes.cardMedia}
-                  image='./images/Perfeo_sertifikat.jpeg'
-                  title='Image title'
+                  image={`./images/${card}`}
+                  title='Certificate'
                 />
               </Card>
             </Grid>
@@ -49,7 +57,7 @@ function Blog() {
       <CertificateDialog
         open={open}
         onClose={handleClose}
-        imgWay='./images/Perfeo_sertifikat.jpeg'
+        imgWay={`./images/${openWay}`}
       />
     </Container>
   )

@@ -25,7 +25,6 @@ function Register() {
   });
 
   useEffect(() => {
-    console.log('first');
     ValidatorForm.addValidationRule('isPasswordMatch', (value) => {
       if (value !== values.password) {
         return false;

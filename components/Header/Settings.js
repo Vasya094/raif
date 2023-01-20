@@ -44,7 +44,6 @@ function Settings(props) {
   };
 
   useEffect(() => {
-    console.log('first');
     setCtn(document.getElementById('main-wrap'));
   }, []);
 

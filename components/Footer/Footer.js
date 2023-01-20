@@ -72,24 +72,26 @@ function Footer(props) {
 
   return (
     <Container maxWidth='lg' component='footer' className={classes.footer}>
-      <Grid container spacing={4}>
+      <Grid
+        direction='row'
+        justifyContent='space-between'
+        container
+        className='ccc'
+        spacing={4}
+      >
         <Grid item xs={12} md={3}>
           <div className={classes.logo}>
-            <img src={theme.palette.type === "dark" ? logoOrange : logoBlue} alt='logo' />
+            <img
+              src={theme.palette.type === "dark" ? logoOrange : logoBlue}
+              alt='logo'
+            />
             <Typography variant='h6' color='textPrimary'>
               {brand.starter.projectName}
             </Typography>
           </div>
-          <Typography
-            color='textPrimary'
-            className={classes.footerDesc}
-            gutterBottom
-          >
-            {t("starter-landing.description_text")}
-          </Typography>
           {isDesktop && <Copyright />}
         </Grid>
-        <Grid item xs={12} md={6}>
+        {/* <Grid item xs={12} md={6}>
           <Grid container spacing={4} justifyContent='space-evenly'>
             {footers.map((footer) => (
               <Grid
@@ -163,7 +165,7 @@ function Footer(props) {
               </Grid>
             ))}
           </Grid>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} md={3}>
           <div className={classes.socmed}>
             <IconButton

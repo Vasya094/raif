@@ -8,8 +8,6 @@ const mainStyles = makeStyles((theme) => ({
       width: "100vw",
     },
     backgroundColor: theme.palette.action.half,
-    // display: "flex",
-    // flexFlow: "column-reverse",
   },
   textContainer: {
     padding: "12px",

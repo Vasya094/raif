@@ -4,34 +4,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import { useTranslation } from "react-i18next"
 import useStyles from "./main-style"
 
-// const content = [
-//   {
-//     title: 'title',
-//     button: 'Read More',
-//     image: imgAPI.photo[0],
-//     user: 'Luanda Gjokaj',
-//     userProfile: imgAPI.avatar[2],
-//   },
-//   {
-//     title: 'title',
-//     button: 'Discover',
-//     image: imgAPI.photo[0],
-//     user: 'Erich Behrens',
-//     userProfile: imgAPI.avatar[7],
-//   },
-//   {
-//     title: 'title',
-//     button: 'Buy now',
-//     image: imgAPI.photo[0],
-//     user: 'Bruno Vizovskyy',
-//     userProfile: imgAPI.avatar[8],
-//   }
-// ];
-
 function MainPage() {
   const { t } = useTranslation("common")
-  const router = useRouter()
-  const currentLangRu = router.query.locale === "ru"
   const classes = useStyles()
 
   return (

@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import CountUp from "react-countup"
 import ScrollAnimation from "react-scroll-animation-wrapper"
 import Typography from "@material-ui/core/Typography"
-// import BusinessCenterSharp from "@material-ui/core/BusinessCenterSharp"
 import Grid from "@material-ui/core/Grid"
 import Container from "@material-ui/core/Container"
 import useStyles from "./counter-style"
@@ -14,7 +13,7 @@ function Counter() {
   const [play, setPlay] = useState(false)
 
   const countup = (val, isPlay) => (
-    <span>{isPlay ? <CountUp end={val} /> : 0}</span>
+    <span>{isPlay ? <CountUp separator=' ' end={val} /> : 0}</span>
   )
 
   const handlePlay = (visible) => {
@@ -35,7 +34,7 @@ function Counter() {
           className={classes.root}
           spacing={6}
         >
-          <Grid md={4} item>
+          <Grid style={{width: '100%'}} md={4} item>
             <ScrollAnimation
               animateOnce
               animateIn='fadeIn'
@@ -53,7 +52,7 @@ function Counter() {
               </div>
             </ScrollAnimation>
           </Grid>
-          <Grid md={4} item>
+          <Grid style={{width: '100%'}} md={4} item>
             <div className={classes.counterItem}>
               <i className='icon ion-ios-speedometer-outline' />
               <div className={classes.text}>
@@ -64,7 +63,7 @@ function Counter() {
               </div>
             </div>
           </Grid>
-          <Grid md={4} item>
+          <Grid style={{width: '100%'}} md={4} item>
             <div className={classes.counterItem}>
               <i className='icon ion-ios-cash-outline' />
               <div className={classes.text}>

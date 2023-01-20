@@ -17,6 +17,7 @@ import Footer from '~/components/Footer';
 import PageNav from '~/components/PageNav';
 import useStyles from '../../theme/indexPage';
 import MainPage from '../../components/MainPage';
+import ForAgriculturalHoldings from '../../components/ForAgriculturalHoldings/ForAgriculturalHoldings';
 
 function Landing(props) {
   const classes = useStyles();
@@ -45,6 +46,9 @@ function Landing(props) {
               <Feature />
             </Container>
           </section>
+          <section>
+              <ForAgriculturalHoldings  />
+          </section>
           <section className={classes.pageSection}>
             <Counter />
           </section>
@@ -52,7 +56,7 @@ function Landing(props) {
             <Testimonials />
           </section> */}
           <section className={classes.spaceTop} id="pricing">
-            {/* <Pricing /> */}
+            <Pricing />
           </section>
           <section
             className={clsx(classes.spaceTop, classes.spaceBottomShort)}
