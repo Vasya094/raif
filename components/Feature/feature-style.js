@@ -36,7 +36,9 @@ const featureStyles = makeStyles(theme => ({
     },
   },
   text: {},
-  img: {},
+  imgTag: {
+    boxShadow: 'rgba(0, 0, 0, 0.56) 0px 22px 70px 4px'
+  },
   imgFull: {},
   last: {},
   featureMore: {
@@ -154,7 +156,7 @@ const featureStyles = makeStyles(theme => ({
     right: -210
   },
   parallaxCircle: {
-    top: 250,
+    top: 350,
     width: 600,
     height: 570,
     opacity: 0.1,

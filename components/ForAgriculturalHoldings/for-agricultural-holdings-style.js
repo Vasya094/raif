@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles"
+import bg from "../../public/images/BG.png"
 
 const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
   container: {
@@ -6,16 +7,45 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "100vw",
     },
-    background:
-      "linear-gradient(0deg, rgba(245,123,32,1) 0%, rgba(25,101,176,1) 51%, rgba(255,255,255,1) 100%)",
+    background: `url(${bg}) no-repeat center center fixed`,
+    backgroundSize: "cover",
+    backgroundAttachment: "scroll",
+    height: "100vh",
+    "-webkit-background-size": "cover",
+    "-moz-background-size": "cover",
+    "-o-background-size": "cover",
+    "&:after": {
+      content: "",
+      backgroundAttachment: "scroll",
+      position: "fixed" /* stretch a fixed position to the whole screen */,
+      top: "0",
+      height:
+        "100vh" /* fix for mobile browser address bar appearing disappearing */,
+      left: "0",
+      right: "0",
+      zIndex: "-1",
+      background: `url(${bg}) no-repeat center center fixed`,
+      "-webkit-background-size": "cover",
+      "-moz-background-size": "cover",
+      "-o-background-size": "cover",
+      backgroundSize: "cover",
+    },
   },
   textContainer: {
     padding: "12px",
-    marginBottom: "6rem",
     position: "relative",
     marginTop: "0",
     transform: "translateY(-44%)",
     top: "50%",
+    height: "90%",
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    [theme.breakpoints.down("sm")]: {
+      "& :nth-child(1)": {
+        width: "90%",
+      },
+    },
   },
   "@keyframes dropIn": {
     from: {
@@ -99,14 +129,60 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
+    width: "44vw",
+    flexDirection: "column",
     justifyContent: "space-around",
+
+    "& :nth-child(1)": {
+      alignSelf: "end",
+    },
+    "& :nth-child(2)": {
+      alignSelf: "center",
+    },
+    "& :nth-child(3)": {
+      alignSelf: "start",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
-  testDiv: {},
+  testDiv: {
+    margin: "8px",
+  },
+  benefHeadOne: {
+    fontSize: "2.5rem",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: '5px',
+      marginBottom: '15px',
+    },
+  },
+  longText: {
+    fontSize: "19px",
+  },
+  reactTooltip: {
+    backgroundColor: theme.palette.type === "dark" ? "white" : "gray",
+  },
+  reactTooltipComponent: {
+    fontSize: '19px',
+    color: theme.palette.type !== "dark" ? "white" : "black",
+  },
+  textsCon: {
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: "3rem",
+      width: "50vw",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  },
   imgDiv: {
     cursor: "pointer",
     height: "13rem",
     width: "13rem",
-    border: "5px solid black",
+    border: "5px solid",
+    borderColor: theme.palette.text.primary,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

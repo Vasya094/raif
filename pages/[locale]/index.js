@@ -5,6 +5,8 @@ import clsx from 'clsx';
 import Head from 'next/head';
 import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
+import "aos/dist/aos.css"
+import 'tippy.js/dist/tippy.css';
 import { useTranslation } from 'react-i18next';
 import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
 import Header from '~/components/Header';

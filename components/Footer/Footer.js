@@ -60,7 +60,6 @@ function Footer(props) {
   const { toggleDir } = props
   // Theme breakpoints
   const theme = useTheme()
-  console.log(theme.palette.type)
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"))
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 

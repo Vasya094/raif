@@ -7,15 +7,18 @@ const mainStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "100vw",
     },
-    backgroundColor: theme.palette.action.half,
   },
   textContainer: {
     padding: "12px",
     marginBottom: "6rem",
     position: "relative",
     marginTop: "0",
-    transform: "translateY(-44%)",
+    display: "flex",
+    alignItems: "center",
+    transform: "translateY(-50%)",
     top: "50%",
+    height: "100vh",
+    backgroundColor: theme.palette.action.half,
   },
   "@keyframes dropIn": {
     from: {
@@ -97,7 +100,14 @@ const mainStyles = makeStyles((theme) => ({
     textDecoration: "none",
   },
   imgFull: {},
-  last: {},
+  videoBg: {
+    objectFit: "cover",
+    width: "100vw",
+    position: "absolute",
+    height: "100vh",
+    top: "0",
+    left: "0",
+  },
 }))
 
 export default mainStyles

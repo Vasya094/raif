@@ -59,7 +59,7 @@ export default function Pricing() {
         >
           {tiers.map((tier) => (
             <Grid item key={tier.title} xs={12} sm={6} md={4}>
-              <Card style={{ minHeight: "18rem" }}>
+              <Card className={classes.priceCard}>
                 <CardHeader
                   title={tier.title}
                   titleTypographyProps={{ align: "center" }}

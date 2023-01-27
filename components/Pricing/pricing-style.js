@@ -4,6 +4,12 @@ const useStyles = makeStyles(theme => ({
   pricingWrap: {
     marginTop: theme.spacing(5)
   },
+  priceCard: {
+    minHeight: "18rem",
+    [theme.breakpoints.down("xs")]: {
+      minHeight: "unset" 
+    },
+  },
   cardHeader: {
     backgroundColor: theme.palette.type === 'dark' ? theme.palette.grey[900] : theme.palette.grey[200],
     fontSize: '70px',

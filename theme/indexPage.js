@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles"
-import bg from "../public/images/panorama_factory.jpeg"
 
 const sectionMargin = (margin) => margin * 15
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(0),
   },
   firstMain: {
-    background: `url(${bg}) no-repeat center center fixed`,
     backgroundSize: "cover",
     backgroundColor: "#464646",
     backgroundAttachment: 'scroll',
@@ -36,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
       left: "0",
       right: "0",
       zIndex: "-1",
-      background: `url(${bg}) no-repeat center center fixed`,
       "-webkit-background-size": "cover",
       "-moz-background-size": "cover",
       "-o-background-size": "cover",
