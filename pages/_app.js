@@ -18,7 +18,6 @@ import lngDetector from '../lib/languageDetector';
 import appTheme from '../theme/appTheme';
 /* import css vendors */
 import '~/vendors/hamburger-menu.css';
-import 'react-animated-slider/build/horizontal.css';
 import '~/vendors/animate-slider.css';
 import 'animate.css/animate.css';
 import '../vendors/animate-extends.css';
