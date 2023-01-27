@@ -54,9 +54,6 @@ function Landing(props) {
           <section className={classes.pageSection}>
             <Counter />
           </section>
-          {/* <section className={classes.spaceTop} id="testimonials">
-            <Testimonials />
-          </section> */}
           <section className={classes.spaceTop} id="pricing">
             <Pricing />
           </section>
