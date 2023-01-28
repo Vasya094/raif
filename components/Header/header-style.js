@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import flag from '~/public/images/flag-logo.png';
 
 const flagIcon = {
   width: 16,
@@ -9,7 +8,6 @@ const flagIcon = {
   position: 'relative',
   marginRight: 5,
   top: 1,
-  background: `url(${flag}) no-repeat transparent`,
   backgroundSize: '16px auto',
   '&[class="ru"]': {
     backgroundPosition: '0 3px',

@@ -43,7 +43,7 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     flexDirection: "row",
     [theme.breakpoints.down("sm")]: {
       "& :nth-child(1)": {
-        width: "90%",
+        // width: "90%",
       },
     },
   },
@@ -150,20 +150,27 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     margin: "8px",
   },
   benefHeadOne: {
-    fontSize: "2.5rem",
+    fontSize: "3.5rem",
+    fontWeight: "500",
+    marginTop: "6px",
     [theme.breakpoints.down("sm")]: {
-      marginTop: '5px',
-      marginBottom: '15px',
+      marginTop: "2rem",
+      fontSize: "2.5rem",
     },
   },
   longText: {
-    fontSize: "19px",
+    marginTop: "2.5rem",
+    fontSize: "22px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "1.5rem",
+      fontSize: "20px",
+    },
   },
   reactTooltip: {
     backgroundColor: theme.palette.type === "dark" ? "white" : "gray",
   },
   reactTooltipComponent: {
-    fontSize: '19px',
+    fontSize: "19px",
     color: theme.palette.type !== "dark" ? "white" : "black",
   },
   textsCon: {
@@ -173,8 +180,8 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
       width: "50vw",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: 'auto',
-      marginRight: 'auto',
+      marginLeft: "auto",
+      marginRight: "auto",
     },
   },
   imgDiv: {

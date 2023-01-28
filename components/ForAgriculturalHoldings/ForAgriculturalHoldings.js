@@ -17,7 +17,7 @@ function ForAgriculturalHoldings() {
     <div id='for_agricultural_holdings' className={classes.container}>
       <div className={classes.textContainer}>
         <div className={classes.textsCon}>
-          <h1 className={classes.benefHeadOne}>{t("benefits_agroholdings")}</h1>
+          <div className={classes.benefHeadOne}>{t("benefits_agroholdings")}</div>
           <div id='main_staff_header' className={classes.longText}>
             {t("benefits_agroholdings_text")}
           </div>

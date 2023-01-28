@@ -14,10 +14,14 @@ const subscribeStyles = makeStyles(theme => ({
     padding: theme.spacing(4)
   },
   textField: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(2)
   },
   rightIcon: {
     marginLeft: theme.spacing()
+  },
+  optionsInput: {
+    width: '100%',
+    marginTop: '10px',
   }
 }));
 

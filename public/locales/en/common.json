@@ -82,7 +82,7 @@
   "certificates_documentation": "Certificates and Documentation",
   "company_necessary_documents_certificates": "Our company has the necessary list of documents and certificates",
   "service_packages": "Service packages",
-  "individual_client_price_plan": "Individual approach to each client in the price plan",
+  "individual_client_price_plan": "Individual approach to each client",
   "mobile_brigade": "Mobile brigade",
   "departure_factory": "Departure to the factory",
   "short_term_audits_seasonal": "Short term. (Audits, seasonal work, etc.)",
@@ -98,5 +98,15 @@
   "reducing_burden_accounting_department": "Reducing the burden on the accounting department and the HR department.",
   "issues_registration_relations_between_our_company": "All issues related to the registration of personnel, relations between employees, vacations, absenteeism are assumed by our company.",
   "benefits_agroholdings": "Benefits for Agroholdings",
-  "benefits_agroholdings_text": "Rapid entry and coverage of new customers, plus confident positioning and protection of reputation, could lead to an improved company image through adherence to Halal standards. Competing in the CIS markets holds promise of a profitable share in Halal poultry meat sales. Exporting products to Arab countries can add profits and could include marginal/semi-finished goods. A strong partner with int'l recognition may guarantee sales growth in the expanding Halal market. Increasing the range of Halal products could also boost financial prospects."
+  "benefits_agroholdings_text": "Compliance with halal standards contributes to the rapid coverage of new customers and the expansion of the range. The opportunity to take a profitable share in the sales of halal products by competing in the CIS markets. Exporting products to Arab countries can increase profits. Halal staff is a strong partner with international recognition in the expanding halal market.",
+  "full_company_name": "Full company name",
+  "company_address": "Company address",
+  "which_package_suits_best": "Company address",
+  "want_to_export_your_products": "Do you want to export your products?",
+  "contacts_communication": "Contacts for communication",
+  "fill_form_contact_you": "Fill out the form and we will contact you",
+  "send": "Send",
+  "are_currently_working_halal": "Are you currently working with Halal?",
+  "thank_your_time_contact_soon": "Thank you for your time. We will contact you soon.",
+  "would_like_certificate_cooperating": "Would you like to get a HALAL certificate for free by cooperating with us?"
 }

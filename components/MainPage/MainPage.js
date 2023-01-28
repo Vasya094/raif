@@ -11,7 +11,7 @@ function MainPage() {
   return (
     <div className={classes.container}>
       <video autoPlay loop playsInline muted className={classes.videoBg}>
-        <source src='/images/bg_video.mp4' type='video/mp4' />
+        <source src='/videos/bg_vid.mp4' type='video/mp4' />
         Your browser does not support HTML5 video.
       </video>
       <div className={classes.textContainer}>

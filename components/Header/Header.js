@@ -47,11 +47,7 @@ function Header(props) {
     setOpen((prevOpen) => !prevOpen)
   }
 
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return
-    }
-
+  const handleClose = () => {
     setOpen(false)
   }
 
@@ -150,7 +146,7 @@ function Header(props) {
                           </Button>
                         </li>
                       ) : (
-                        <li>
+                        <li key={item.id.toString()}>
                           <Button
                             ref={anchorRef}
                             id='composition-button'
@@ -197,12 +193,12 @@ function Header(props) {
                                         flexDirection: "column",
                                       }}
                                       aria-labelledby='composition-button'
-                                      onKeyDown={handleListKeyDown}
                                     >
                                       <Button
                                         component={AnchorLink}
                                         style={{ justifyContent: "start" }}
                                         href={item.url}
+                                        onClick={handleClose}
                                       >
                                         {t("about_company")}
                                       </Button>
@@ -210,6 +206,7 @@ function Header(props) {
                                         component={AnchorLink}
                                         style={{ justifyContent: "start" }}
                                         href='#for_agricultural_holdings'
+                                        onClick={handleClose}
                                       >
                                         {t("for_agricultural_holdings")}
                                       </Button>
