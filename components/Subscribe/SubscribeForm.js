@@ -65,7 +65,7 @@ export default function Pricing() {
     setValues({
       ...values,
       [name]:
-        name !== "toExport" && name !== "nowWithHalal"
+        name !== "toExport" && name !== "nowWithHalal" && name !== "freeCer"
           ? event.target.value
           : event.target.checked,
     })
