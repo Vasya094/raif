@@ -15,6 +15,7 @@ import {
   Select,
 } from "@material-ui/core"
 import { useForm } from "@formspree/react"
+import clsx from "clsx"
 
 let messageSentLS = false
 
@@ -83,111 +84,110 @@ export default function Pricing() {
           noValidate
           autoComplete='off'
         >
-          <Grid
-            justifyContent='center'
-            container
-            spacing={3}
-            alignItems='flex-end'
-          >
-            <Grid item md={9} xs={12}>
-              <TextField
-                id='companyName'
-                label={t("full_company_name")}
-                className={classes.textField}
-                fullWidth
-                value={values.companyName}
-                onChange={handleChange("companyName")}
-                margin='normal'
-              />
-            </Grid>
-            <Grid item md={9} xs={12}>
-              <TextField
-                id='adress'
-                label={t("company_address")}
-                className={classes.textField}
-                fullWidth
-                value={values.adress}
-                onChange={handleChange("adress")}
-                margin='normal'
-              />
-            </Grid>
-            <Grid style={{ marginTop: "16px" }} item md={9} xs={12}>
-              <span className={classes.textField}>
-                <InputLabel id='demo-simple-select-standard-label'>
-                  {t("which_package_suits_best")}
-                </InputLabel>
-                <Select
-                  labelId='demo-simple-select-standard-label'
-                  id='demo-simple-select-standard'
-                  value={values.packet}
-                  className={classes.optionsInput}
-                  onChange={handleChange("packet")}
-                  label={t("which_package_suits_best")}
-                >
-                  <MenuItem value='EXPRESS'>EXPRESS</MenuItem>
-                  <MenuItem value='STANDART'>STANDART</MenuItem>
-                  <MenuItem value='EXCLUSIVE'>EXCLUSIVE</MenuItem>
-                </Select>
-              </span>
-            </Grid>
-            <Grid item md={9} xs={12}>
-              <FormControlLabel
-                className={classes.textField}
-                control={
-                  <Checkbox
-                    checked={values.toExport}
-                    onChange={handleChange("toExport")}
-                  />
-                }
-                label={t("want_to_export_your_products")}
-              />
-            </Grid>
-            <Grid item md={9} xs={12}>
-              <FormControlLabel
-                className={classes.textField}
-                control={
-                  <Checkbox
-                    checked={values.nowWithHalal}
-                    onChange={handleChange("nowWithHalal")}
-                  />
-                }
-                label={t("are_currently_working_halal")}
-              />
-            </Grid>
-            <Grid item md={9} xs={12}>
-              <FormControlLabel
-                className={classes.textField}
-                control={
-                  <Checkbox
-                    checked={values.freeCer}
-                    onChange={handleChange("freeCer")}
-                  />
-                }
-                label={t("would_like_certificate_cooperating")}
-              />
-            </Grid>
-            <Grid item md={9} xs={12}>
-              <TextField
-                id='adress'
-                label={t("contacts_communication")}
-                className={classes.textField}
-                fullWidth
-                value={values.contacts}
-                onChange={handleChange("contacts")}
-                margin='normal'
-              />
-            </Grid>
-            <Grid style={{ textAlign: "center" }} item md={9} xs={12}>
-              <Button
-                variant='contained'
-                color='primary'
-                type='submit'
-                className={classes.button}
-              >
-                {t("send")}
-                <Icon className={classes.rightIcon}>send</Icon>
-              </Button>
-            </Grid>
+          <div className={classes.twoColsCont}>
+            <div className={classes.col}>
+              <div>
+                <TextField
+                  id='companyName'
+                  label={t("full_company_name")}
+                  className={classes.textField}
+                  fullWidth
+                  value={values.companyName}
+                  onChange={handleChange("companyName")}
+                  margin='normal'
+                />
+              </div>
+              <div>
+                <TextField
+                  id='adress'
+                  label={t("company_address")}
+                  className={classes.textField}
+                  fullWidth
+                  value={values.adress}
+                  onChange={handleChange("adress")}
+                  margin='normal'
+                />
+              </div>
+              <div style={{ marginTop: "16px" }}>
+                <span className={classes.textField}>
+                  <InputLabel id='demo-simple-select-standard-label'>
+                    {t("which_package_suits_best")}
+                  </InputLabel>
+                  <Select
+                    labelId='demo-simple-select-standard-label'
+                    id='demo-simple-select-standard'
+                    value={values.packet}
+                    className={classes.optionsInput}
+                    onChange={handleChange("packet")}
+                    label={t("which_package_suits_best")}
+                  >
+                    <MenuItem value='EXPRESS'>EXPRESS</MenuItem>
+                    <MenuItem value='STANDART'>STANDART</MenuItem>
+                    <MenuItem value='EXCLUSIVE'>EXCLUSIVE</MenuItem>
+                  </Select>
+                </span>
+              </div>
+            </div>
+            <div className={clsx(classes.col, classes.secCol)}>
+              <div item>
+                <FormControlLabel
+                  className={classes.textField}
+                  control={
+                    <Checkbox
+                      checked={values.toExport}
+                      onChange={handleChange("toExport")}
+                    />
+                  }
+                  label={t("want_to_export_your_products")}
+                />
+              </div>
+              <div item>
+                <FormControlLabel
+                  className={classes.textField}
+                  control={
+                    <Checkbox
+                      checked={values.nowWithHalal}
+                      onChange={handleChange("nowWithHalal")}
+                    />
+                  }
+                  label={t("are_currently_working_halal")}
+                />
+              </div>
+              <div item>
+                <FormControlLabel
+                  className={classes.textField}
+                  control={
+                    <Checkbox
+                      checked={values.freeCer}
+                      onChange={handleChange("freeCer")}
+                    />
+                  }
+                  label={t("would_like_certificate_cooperating")}
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <TextField
+              id='adress'
+              label={t("contacts_communication")}
+              className={classes.textField}
+              fullWidth
+              value={values.contacts}
+              onChange={handleChange("contacts")}
+              margin='normal'
+            />
+          </div>
+          <Grid style={{ textAlign: "center" }}>
+            <Button
+              variant='contained'
+              color='primary'
+              type='submit'
+              className={classes.button}
+            >
+              {t("send")}
+              <Icon className={classes.rightIcon}>send</Icon>
+            </Button>
           </Grid>
         </form>
       </Paper>

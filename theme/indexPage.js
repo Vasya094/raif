@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
   },
   spaceBottom: {
     marginBottom: sectionMargin(theme.spacing()),
+    display: "flex",
+    justifyContent: "center",
   },
   spaceTop: {
     paddingTop: theme.spacing(12),

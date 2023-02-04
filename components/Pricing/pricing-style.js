@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(5)
   },
   priceCard: {
-    minHeight: "18rem",
+    minHeight: "15rem",
     [theme.breakpoints.down("xs")]: {
       minHeight: "unset" 
     },
