@@ -59,7 +59,6 @@ function Certificate() {
         onClose={handleClose}
         imgWay={`./images/${openWay}`}
       />
-      <span id='contacts'></span>
     </Container>
   )
 }

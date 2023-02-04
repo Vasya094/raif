@@ -74,6 +74,7 @@ export default function Pricing() {
 
   return (
     <div className={classes.subscribeWrap}>
+      <span id='contacts'></span>
       <Paper className={classes.paper}>
         <Typography align='center' variant='h5'>
           {t("fill_form_contact_you")}
