@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(12),
     paddingBottom: theme.spacing(14),
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(4),
+      paddingTop: theme.spacing(10),
       height: "min-content",
     },
   },

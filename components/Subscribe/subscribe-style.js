@@ -51,6 +51,7 @@ const subscribeStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   button: {
+    color: 'white',
     marginTop: theme.spacing(4),
   },
   rightIcon: {

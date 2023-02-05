@@ -55,8 +55,8 @@
   "dark_coloured": "Dark",
   "main": "Main",
   "about_us": "About Us",
-  "pricing": "Pricing",
-  "contacts": "Contacts",
+  "pricing": "Services",
+  "contacts": "Contacts us",
   "halal": "Halal",
   "staff": "Staff",
   "halal_staff": "Halal Staff",
@@ -96,9 +96,9 @@
   "for_agricultural_holdings": "For agricultural holdings",
   "work_without_downtime": "Work without downtime",
   "reducing_burden_accounting_department": "Reducing the burden on the accounting department and the HR department.",
-  "issues_registration_relations_between_our_company": "All issues related to the registration of personnel, relations between employees, vacations, absenteeism are assumed by our company.",
+  "issues_registration_relations_between_our_company": "Compliance with halal standards contributes to the rapid coverage of new customers and the expansion of the range. ",
   "benefits_agroholdings": "Benefits for Agroholdings",
-  "benefits_agroholdings_text": "Compliance with halal standards contributes to the rapid coverage of new customers and the expansion of the range. The opportunity to take a profitable share in the sales of halal products by competing in the CIS markets. Exporting products to Arab countries can increase profits. Halal staff is a strong partner with international recognition in the expanding halal market.",
+  "benefits_agroholdings_text": "The opportunity to take a profitable share in the sales of halal products by competing in the CIS markets. Exporting products to Arab countries can increase profits. Halal staff is a strong partner with international recognition in the expanding halal market.",
   "full_company_name": "Full company name",
   "company_address": "Company address",
   "which_package_suits_best": "Which package suits you best?",
@@ -108,5 +108,6 @@
   "send": "Send",
   "are_currently_working_halal": "Are you currently working with Halal?",
   "thank_your_time_contact_soon": "Thank you for your time. We will contact you soon.",
-  "would_like_certificate_cooperating": "Would you like to get a HALAL certificate for free by cooperating with us?"
+  "would_like_certificate_cooperating": "Would you like to get a HALAL certificate for free by cooperating with us?",
+  "samara_stankozavodskaya": "Samara, st. Stankozavodskaya, 40 A"
 }

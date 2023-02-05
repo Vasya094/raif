@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   firstMain: {
     backgroundSize: "cover",
-    backgroundColor: "#464646",
+    backgroundColor: theme.palette.action.half,
     backgroundAttachment: 'scroll',
     height: "100vh",
     "-webkit-background-size": "cover",

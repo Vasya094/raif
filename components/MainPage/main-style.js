@@ -19,6 +19,9 @@ const mainStyles = makeStyles((theme) => ({
     top: "50%",
     height: "100vh",
     backgroundColor: theme.palette.action.half,
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "right"
+    },
   },
   "@keyframes dropIn": {
     from: {
@@ -107,6 +110,10 @@ const mainStyles = makeStyles((theme) => ({
     height: "100vh",
     top: "0",
     left: "0",
+    [theme.breakpoints.down("xs")]: {
+      right: "50%",
+      left: "unset"
+    },
   },
 }))
 

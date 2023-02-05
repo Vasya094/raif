@@ -3,7 +3,7 @@ module.exports = {
     name: 'Halal Staff',
     desc: 'Halal Staff - Complex of Halal services',
     prefix: 'Halal',
-    footerText: 'Halal Staff All Rights Reserved 2021',
+    footerText: 'Halal Staff All Rights Reserved 2023',
     logoText: 'Halal Staff',
     projectName: 'Halal Staff',
     url: 'HalalStaff.com',

@@ -12,18 +12,20 @@ function ForAgriculturalHoldings() {
   useEffect(() => {
     AOS.init()
   }, [])
-
+  //Cоблюдение халяльных стандартов способствует быстрому  охвату новых клиентов и расширению ассортимента.
   return (
     <div id='for_agricultural_holdings' className={classes.container}>
       <div className={classes.textContainer}>
+        <span className='card_animation'></span>
         <div className={classes.textsCon}>
-          <div className={classes.benefHeadOne}>{t("benefits_agroholdings")}</div>
+          <div className={classes.benefHeadOne}>
+            {t("benefits_agroholdings")}
+          </div>
           <div id='main_staff_header' className={classes.longText}>
             {t("benefits_agroholdings_text")}
           </div>
         </div>
         <div className={classes.overflowHidden}>
-          <span className='card_animation'></span>
           <div className={classes.cardsContainer}>
             <div
               className={classes.testDiv}

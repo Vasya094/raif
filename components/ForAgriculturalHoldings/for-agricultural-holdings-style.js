@@ -42,9 +42,8 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     flexDirection: "row",
     [theme.breakpoints.down("sm")]: {
-      "& :nth-child(1)": {
-        // width: "90%",
-      },
+      flexDirection: "column",
+      justifyContent: "unset",
     },
   },
   "@keyframes dropIn": {
@@ -104,6 +103,7 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     display: "flex",
     width: "8rem",
     flexDirection: "row",
+
     alignItems: "center",
     marginRight: "auto",
     marginLeft: "auto",
@@ -131,6 +131,11 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     width: "44vw",
     flexDirection: "column",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "row",
+      width: "100%",
+      marginTop: "3rem",
+    },
     justifyContent: "space-around",
 
     "& :nth-child(1)": {
@@ -142,9 +147,9 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     "& :nth-child(3)": {
       alignSelf: "start",
     },
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
+    // [theme.breakpoints.down("sm")]: {
+    //   display: "none",
+    // },
   },
   testDiv: {
     margin: "8px",
@@ -186,8 +191,14 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
   },
   imgDiv: {
     cursor: "pointer",
-    height: "13rem",
-    width: "13rem",
+    height: "11rem",
+    width: "11rem",
+    [theme.breakpoints.down("sm")]: {
+      height: "7rem",
+      width: "7rem",
+      border: "2px solid",
+      borderColor: theme.palette.text.primary,
+    },
     border: "5px solid",
     borderColor: theme.palette.text.primary,
     display: "flex",

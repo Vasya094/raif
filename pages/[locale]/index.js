@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import clsx from "clsx"
@@ -25,6 +25,11 @@ function Landing(props) {
   const classes = useStyles()
   const { t } = useTranslation("common")
   const { onToggleDark, onToggleDir } = props
+  useEffect(() => {
+    return () => {
+      window.history.replaceState(null, null, window.location.pathname)
+    }
+  })
   return (
     <React.Fragment>
       <Head>
@@ -58,7 +63,10 @@ function Landing(props) {
           <section className={clsx(classes.spaceTop, classes.spaceBottomShort)}>
             <Certificate />
           </section>
-          <section className={classes.spaceBottom}>
+          <section
+            id='contacts'
+            className={clsx(classes.spaceTop, classes.spaceBottom)}
+          >
             <Subscribe />
           </section>
         </main>

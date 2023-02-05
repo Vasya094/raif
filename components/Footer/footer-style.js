@@ -7,8 +7,8 @@ const footerStyles = makeStyles((theme) => ({
   footer: {
     position: "relative",
     marginTop: theme.spacing(8),
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(8),
+    padding: theme.spacing(3),
+    boxShadow: "0px -1px 5px 0px rgb(0 0 0 / 75%)",
     "& ul": {
       margin: 0,
       padding: 0,
@@ -63,6 +63,7 @@ const footerStyles = makeStyles((theme) => ({
   },
   socmed: {
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     marginBottom: theme.spacing(4),
     "& button": {
@@ -89,7 +90,7 @@ const footerStyles = makeStyles((theme) => ({
   },
   selectLang: {
     margin: "0 auto",
-    width: 200,
+    maxWidth: 200,
     display: "inherit",
     marginTop: theme.spacing(2),
     color: theme.palette.type === "dark" ? "#ff6f00bd" : "#1965B0",
@@ -129,6 +130,21 @@ const footerStyles = makeStyles((theme) => ({
   },
   accordionIcon: {
     padding: 0,
+  },
+  conIcon: {
+    color: theme.palette.type === "dark" ? "#ff6f00bd" : "#1965B0",
+  },
+  icoCon: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  conText: {
+    marginLeft: "6px",
+    marginTop: "2px"
+  },
+  footerBody: {
+    paddingRight: "3rem",
+    paddingLeft: "3rem",
   },
 }))
 

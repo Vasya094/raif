@@ -168,6 +168,7 @@ const headerStyles = makeStyles((theme) => ({
   },
   mobileMenu: {
     marginRight: theme.spacing(),
+    marginLeft: theme.spacing(2.5),
     '& $bar': {
       backgroundColor: theme.palette.text.secondary,
       '&:after, &:before': {
