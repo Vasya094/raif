@@ -20,7 +20,8 @@ const mainStyles = makeStyles((theme) => ({
     height: "100vh",
     backgroundColor: theme.palette.action.half,
     [theme.breakpoints.down("xs")]: {
-      textAlign: "right"
+      textAlign: "right",
+      justifyContent: "center",
     },
   },
   "@keyframes dropIn": {
@@ -112,7 +113,8 @@ const mainStyles = makeStyles((theme) => ({
     left: "0",
     [theme.breakpoints.down("xs")]: {
       right: "50%",
-      left: "unset"
+      left: "unset",
+      width: "166vw",
     },
   },
 }))

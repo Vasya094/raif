@@ -9,6 +9,9 @@ const footerStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
     padding: theme.spacing(3),
     boxShadow: "0px -1px 5px 0px rgb(0 0 0 / 75%)",
+    [theme.breakpoints.down("xs")]: {
+      boxShadow: "none",
+    },
     "& ul": {
       margin: 0,
       padding: 0,
@@ -54,6 +57,7 @@ const footerStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
       padding: theme.spacing(0, 3),
+      marginBottom: 0,
     },
   },
   footerDesc: {
@@ -63,6 +67,7 @@ const footerStyles = makeStyles((theme) => ({
   },
   socmed: {
     display: "flex",
+    alignItems: "center",
     flexDirection: "column",
     justifyContent: "center",
     marginBottom: theme.spacing(4),
@@ -94,6 +99,9 @@ const footerStyles = makeStyles((theme) => ({
     display: "inherit",
     marginTop: theme.spacing(2),
     color: theme.palette.type === "dark" ? "#ff6f00bd" : "#1965B0",
+    "& #mui-component-select-lang": {
+      color: theme.palette.type === "dark" ? "white" : "#1965B0",
+    },
     "& $icon": {
       top: 21,
       position: "relative",
@@ -140,7 +148,10 @@ const footerStyles = makeStyles((theme) => ({
   },
   conText: {
     marginLeft: "6px",
-    marginTop: "2px"
+    marginTop: "2px",
+    width: "max-content",
+    color: theme.palette.type === "dark" ? "white" : "#1965B0",
+    textAlign: "center",
   },
   footerBody: {
     paddingRight: "3rem",

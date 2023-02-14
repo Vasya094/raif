@@ -128,7 +128,7 @@
     height: calc(100vh - 75px);
   }    
 }
-@media (max-height: 700px) {
+@media (max-height: 650px) {
   #main_text {
     display: none;
   }    
@@ -265,4 +265,23 @@
 .slide.animateOut section span strong {
 	-webkit-transition-delay: 0s;
 					transition-delay: 0s;
+}
+
+#load_page_logo {
+  -webkit-animation: zoom1-2 infinite 2s;
+          animation: zoom1-2 infinite 2s;
+  -webkit-transform-origin:0 0 ;
+          transform-origin:0 0 ;
+}
+@-webkit-keyframes zoom1-2 {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes zoom1-2 {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }

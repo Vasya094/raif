@@ -6,8 +6,8 @@ import { useTheme } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import Typography from "@material-ui/core/Typography"
 import { useTranslation } from "next-i18next"
-import logoBlue from "~/public/images/blue_hs.png"
-import logoOrange from "~/public/images/Logo__HS_orange.png"
+import logoBlue from "~/public/images/blue_hs_without.png"
+import logoOrange from "~/public/favicons/apple-icon-57x57-seochecker-910.png"
 import brand from "~/public/text/brand"
 import SelectLang from "../LangSwitch/Select"
 import { useTextAlign } from "~/theme/common"
@@ -15,6 +15,7 @@ import useStyles from "./footer-style"
 import Place from "@material-ui/icons/Place"
 import Phone from "@material-ui/icons/Phone"
 import Email from "@material-ui/icons/Email"
+import { Link } from "@material-ui/core"
 
 function Copyright() {
   return (
@@ -50,10 +51,15 @@ function Footer(props) {
         <Grid item xs={12} sm={3}>
           <div className={classes.logo}>
             <img
+              style={{ width: theme.palette.type !== "dark" ? "60px" : "48px" }}
               src={theme.palette.type === "dark" ? logoOrange : logoBlue}
               alt='logo'
             />
-            <Typography variant='h6' color='textPrimary'>
+            <Typography
+              style={{ minWidth: "max-content" }}
+              variant='h6'
+              color='textPrimary'
+            >
               {brand.starter.projectName}
             </Typography>
           </div>
@@ -65,19 +71,33 @@ function Footer(props) {
               <span>
                 <Place className={classes.conIcon} />{" "}
               </span>
-              <span className={classes.conText}> {t("samara_stankozavodskaya")}</span>
+              <span className={classes.conText}>
+                {t("samara_stankozavodskaya")}
+              </span>
             </div>
             <div className={classes.icoCon}>
               <span>
                 <Phone className={classes.conIcon} />{" "}
               </span>
-              <span className={classes.conText}> 8 800 700 63 07</span>
+              <Link
+                className={classes.conText}
+                style={{ paddingTop: "2px" }}
+                href='tel:8 800 700 63 07'
+              >
+                8 800 700 63 07
+              </Link>
             </div>
             <div className={classes.icoCon}>
               <span>
                 <Email className={classes.conIcon} />{" "}
               </span>
-              <span className={classes.conText}> info@amargroup.ru</span>
+              <Link
+                className={classes.conText}
+                style={{ paddingTop: "2px" }}
+                href='mailto:info@halalstaff.com'
+              >
+                info@halalstaff.com
+              </Link>
             </div>
           </div>
           <SelectLang toggleDir={toggleDir} />

@@ -129,7 +129,7 @@ export default function Pricing() {
               </div>
             </div>
             <div className={clsx(classes.col, classes.secCol)}>
-              <div item>
+              <div>
                 <FormControlLabel
                   className={classes.textField}
                   control={
@@ -141,7 +141,7 @@ export default function Pricing() {
                   label={t("want_to_export_your_products")}
                 />
               </div>
-              <div item>
+              <div>
                 <FormControlLabel
                   className={classes.textField}
                   control={
@@ -153,7 +153,7 @@ export default function Pricing() {
                   label={t("are_currently_working_halal")}
                 />
               </div>
-              <div item>
+              <div>
                 <FormControlLabel
                   className={classes.textField}
                   control={
@@ -173,6 +173,7 @@ export default function Pricing() {
               label={t("contacts_communication")}
               className={classes.textField}
               fullWidth
+              required={true}
               value={values.contacts}
               onChange={handleChange("contacts")}
               margin='normal'

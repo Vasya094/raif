@@ -13,7 +13,7 @@ function MainFeature() {
   const align = useTextAlign()
   return (
     <div className={clsx(classes.featureMore)}>
-      <Grid container spacing={6}>
+      <Grid justifyContent="center" container spacing={6}>
         <Grid md={6} item>
           <div className={classes.featureItem}>
             <ScrollAnimation animateOnce animateIn='fadeInLeft' duration={0.6}>
@@ -49,7 +49,7 @@ function MainFeature() {
               delay={500}
               duration={0.6}
             >
-              <figure className={classes.img}>
+              <figure className={classes.imgFigure}>
                 <img
                   className={classes.imgTag}
                   src='/images/staff_3_copy.jpg'
@@ -60,7 +60,7 @@ function MainFeature() {
           </div>
         </Grid>
       </Grid>
-      <Grid container className={classes.secondImgText} spacing={6}>
+      <Grid justifyContent="center" container spacing={6}>
         <Grid md={6} item>
           <div className={classes.featureItem}>
             <ScrollAnimation
@@ -77,7 +77,7 @@ function MainFeature() {
               delay={500}
               duration={0.6}
             >
-              <figure className={classes.img}>
+              <figure className={classes.imgFigure}>
                 <img
                   className={classes.imgTag}
                   src='/images/three_man.jpeg'

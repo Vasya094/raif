@@ -134,7 +134,7 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "row",
       width: "100%",
-      marginTop: "3rem",
+      // marginTop: "3rem",
     },
     justifyContent: "space-around",
 
@@ -167,7 +167,7 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
     marginTop: "2.5rem",
     fontSize: "22px",
     [theme.breakpoints.down("sm")]: {
-      marginTop: "1.5rem",
+      margin: "1.5rem 0",
       fontSize: "20px",
     },
   },
@@ -198,6 +198,10 @@ const ForAgriculturalHoldingsStyles = makeStyles((theme) => ({
       width: "7rem",
       border: "2px solid",
       borderColor: theme.palette.text.primary,
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "5rem",
+      width: "5rem",
     },
     border: "5px solid",
     borderColor: theme.palette.text.primary,

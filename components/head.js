@@ -9,12 +9,10 @@ const HeadComponent = () => {
   return (
   <Head>
     <meta charSet="utf-8" />
-    {/* Use minimum-scale=1 to enable GPU rasterization */}
     <meta
       name="description"
       content={t('complex_services_agroholdings')}
     />
-    {/* Favicon */}
     <link rel="icon" href="/favicons/favicon.ico" />
     <link rel="icon" sizes="192x192" type="image/png" href="/android-icon-192x192-seochecker-910.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180-seochecker-910.png" />
@@ -41,16 +39,8 @@ const HeadComponent = () => {
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link href="https://unpkg.com/ionicons@3.0.0/dist/css/ionicons.min.css" rel="stylesheet" />
-    {/*  Facebook */}
-    <meta property="author" content="luxi" />
-    <meta property="og:site_name" content="luxi.ux-maestro.com" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="ru" />
     <meta property="og:type" content="website" />
-    {/*  Twitter */}
-    <meta property="twitter:site" content="luxi.ux-maestro.com" />
-    <meta property="twitter:domain" content="luxi.ux-maestro.com" />
-    <meta property="twitter:creator" content="luxi" />
-    <meta property="twitter:card" content="summary" />
     <meta property="twitter:image:src" content="/images/logo.png" />
     <meta property="og:url" content={brand.starter.url} />
     <meta property="og:title" content={brand.starter.title} />

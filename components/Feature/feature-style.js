@@ -36,9 +36,12 @@ const featureStyles = makeStyles(theme => ({
     },
   },
   text: {},
+  imgFigure: {
+    margin: 0,
+  },
   imgTag: {
-    borderRadius: '2rem',
-    boxShadow: 'rgba(0, 0, 0, 0.56) 0px 22px 70px 4px'
+    borderRadius: '10px',
+    boxShadow: 'rgb(0 0 0 / 56%) -4px 3px 12px 0px'
   },
   imgFull: {},
   last: {},
@@ -168,7 +171,7 @@ const featureStyles = makeStyles(theme => ({
   },
   secondImgText: {
     [theme.breakpoints.down('md')]: {
-      flexFlow: 'column-reverse'
+      flexFlow: 'row'
     },
   }
 }));
