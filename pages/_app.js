@@ -27,7 +27,7 @@ import "../vendors/slick/slick-theme.css"
 let themeType = "light"
 if (typeof Storage !== "undefined") {
   // eslint-disable-line
-   themeType = localStorage.getItem("colorTheme") || "light"
+  themeType = localStorage.getItem("colorTheme") || "light"
 }
 
 function MyApp(props) {
@@ -39,13 +39,13 @@ function MyApp(props) {
   })
 
   useEffect(() => {
-    const preloader = document.getElementById('preloader');
+    const preloader = document.getElementById("preloader")
     if (preloader !== null || undefined) {
       setTimeout(() => {
-        preloader.remove();
-      }, 2000);
+        preloader.remove()
+      }, 2000)
     }
-  }, []);
+  }, [])
 
   const toggleDarkTheme = () => {
     const newPaletteType = theme.palette.type === "light" ? "dark" : "light"
@@ -53,7 +53,7 @@ function MyApp(props) {
       "colorTheme",
       theme.palette.type === "light" ? "dark" : "light"
     )
-    themeType = newPaletteType;
+    themeType = newPaletteType
     setTheme({
       ...appTheme("burgundy", newPaletteType),
       direction: theme.direction,
